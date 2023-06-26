@@ -1,0 +1,170 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+header {
+  height: 50px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+}
+
+.order {
+  padding: 10px;
+  background-color: #c8102e;
+  color: #fff;
+}
+
+.hero > img {
+  width: 100%;
+}
+
+.product {
+  display: flex;
+}
+
+.carousel {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+}
+
+@media (max-width: 1024px) {
+  .carousel {
+    display: none;
+  }
+}
+
+.carouselImg {
+  margin: 5px;
+  width: 140px;
+  height: 140px;
+  border: 1px solid gray;
+}
+
+.carouselImg:hover {
+  border: 1px solid red;
+}
+
+.carouselButton {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.mainPhoto {
+  width: 500px;
+  height: 500px;
+}
+
+.headphoneInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid blue;
+  margin: 30px;
+  width: 300px;
+}
+
+@media (max-width: 750px) {
+  .headphoneInfo {
+    display: none;
+  }
+}
+
+.whereToBuyBut {
+  width: 200px;
+  height: 50px;
+  border: 1px solid red;
+  background-color: red;
+}
+
+.phone {
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  margin: 0 0 50px 0;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature {
+  border: 1px solid #e6ebf0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 200px;
+  height: 60px;
+}
+
+.feature_text {
+  width: 100%;
+  text-align: center;
+}
+
+.price_and_form {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.price {
+}
+
+.form {
+}
+
+.input {
+  display: block;
+  margin: 10px 0;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 50px;
+}
+
+.burger {
+  display: none;
+}
