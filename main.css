@@ -1,3 +1,8 @@
+@font-face {
+  font-family: hyperFont;
+  src: url(./font/SB-Hyper\ X.ttf);
+}
+
 html,
 body {
   margin: 0;
@@ -5,17 +10,37 @@ body {
   font-family: proxima-nova, -apple-system, blinkmacsystemfont, San Francisco,
     Helvetica, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
 }
 
 img {
   mix-blend-mode: multiply;
+  -webkit-user-drag: none;
 }
 
 p,
 h1 {
   margin: 0;
+}
+
+.logo {
+  font-family: hyperFont;
+  font-size: 3rem;
+  font-weight: 420;
+  color: black;
+  user-select: none;
+  cursor: pointer;
+}
+
+.contacts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact {
+  color: black;
 }
 
 a:link,
@@ -34,10 +59,14 @@ header {
   border-bottom: 1px solid #e6ebf0;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
   header {
-    padding: 50px;
+    padding: 0 20px;
   }
+}
+
+.contact {
+  display: block;
 }
 
 .order {
@@ -59,9 +88,15 @@ header {
 }
 
 .product__container {
-  margin-top: 50px;
   display: flex;
   max-width: 1200px;
+}
+
+@media (max-width: 900px) {
+  .product__container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .carousel {
@@ -80,14 +115,25 @@ header {
   }
 }
 
-.carouselImg {
+.carousel__images {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.carousel__image {
   width: 100px;
   height: 100px;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
-.carouselImg:hover {
-  border: 1px solid red;
+.carousel__image:hover {
+  border: 1px solid #e01637;
+}
+
+.carousel__image.active {
+  border: 1px solid #e6ebf0;
 }
 
 .carousel__button {
@@ -98,19 +144,21 @@ header {
   border: 1px solid #e6ebf0;
 }
 
-.mainPhoto {
-  width: 700px;
-  height: 700px;
+.product__image {
+  width: calc(100vh - 70px - 6rem);
+  height: calc(100vh - 70px - 6rem);
 }
 
-.product__info {
+.product__info > ul {
+  margin: 0.5rem 0 0.5rem 0;
+  padding-left: 1rem;
 }
 
-@media (max-width: 750px) {
-  .headphoneInfo {
+/* @media (max-width: 900px) {
+  .product__info {
     display: none;
   }
-}
+} */
 
 .whereToBuyBut {
   width: 200px;
@@ -120,7 +168,13 @@ header {
 }
 
 section {
-  margin: 0 0 50px 0;
+  padding: 3rem 0;
+}
+
+.description {
+  max-width: 1328px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .features {
@@ -160,8 +214,9 @@ section {
   border: 1px solid red;
 }
 
-.input {
+.form__input {
   margin: 10px 0;
+  display: block;
 }
 
 footer {
