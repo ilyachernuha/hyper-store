@@ -2,13 +2,19 @@ html,
 body {
   margin: 0;
   height: 100%;
+  font-family: proxima-nova, -apple-system, blinkmacsystemfont, San Francisco,
+    Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
+img {
+  mix-blend-mode: multiply;
+}
+
+p,
 h1 {
-  margin: 0;
-}
-
-p {
   margin: 0;
 }
 
@@ -20,28 +26,42 @@ a:active {
 }
 
 header {
-  height: 50px;
-  padding: 0 50px;
+  height: 70px;
+  padding: 0 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #e6ebf0;
 }
 
-.logo {
+@media (max-width: 750px) {
+  header {
+    padding: 50px;
+  }
 }
 
 .order {
   padding: 10px;
   background-color: #c8102e;
   color: #fff;
+  cursor: pointer;
 }
 
-.hero > img {
-  width: 100%;
+.order:hover {
+  background-color: #e01637;
 }
 
 .product {
+  background-color: #f5f6f7;
+  width: 100%;
   display: flex;
+  justify-content: center;
+}
+
+.product__container {
+  margin-top: 50px;
+  display: flex;
+  max-width: 1200px;
 }
 
 .carousel {
@@ -51,6 +71,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 150px;
+  gap: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -60,35 +81,29 @@ header {
 }
 
 .carouselImg {
-  margin: 5px;
-  width: 140px;
-  height: 140px;
-  border: 1px solid gray;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
 }
 
 .carouselImg:hover {
   border: 1px solid red;
 }
 
-.carouselButton {
-  width: 50px;
-  height: 50px;
+.carousel__button {
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+  background: transparent;
+  border: 1px solid #e6ebf0;
 }
 
 .mainPhoto {
-  width: 500px;
-  height: 500px;
+  width: 700px;
+  height: 700px;
 }
 
-.headphoneInfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 1px solid blue;
-  margin: 30px;
-  width: 300px;
+.product__info {
 }
 
 @media (max-width: 750px) {
@@ -102,15 +117,6 @@ header {
   height: 50px;
   border: 1px solid red;
   background-color: red;
-}
-
-.phone {
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 section {
@@ -147,22 +153,22 @@ section {
 }
 
 .price {
+  border: 1px solid red;
 }
 
 .form {
+  border: 1px solid red;
 }
 
 .input {
-  display: block;
   margin: 10px 0;
 }
 
 footer {
   display: flex;
-  align-items: center;
-  background-color: black;
-  color: white;
+  justify-content: center;
   height: 50px;
+  font-size: 13px;
 }
 
 .burger {
