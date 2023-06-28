@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Hyper Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- TODO: Please add all possible icons for all possible platforms below -->
+    <link href="img/icon_196.png" sizes="196x196" rel="icon" type="image/png" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
   <body>
     <header>
-      <h1 class="logo">Hyper Store</h1>
-      <a class="order" href="tel:+380981488228">Замовити</a>
+      <a href="/" class="logo">HYPER STORE</a>
+      <ul class="contacts">
+        <li>
+          <a class="contact" href="tel:+380981488228">+380981488228</a>
+        </li>
+        <li>
+          <a class="contact" href="tel:+380981488228">+380981488322</a>
+        </li>
+      </ul>
       <div class="burger">
         <ul>
           <li>First</li>
@@ -20,30 +29,71 @@
       </div>
     </header>
     <main>
-      <section class="hero"><img src="img/hero.jpg" /></section>
       <section class="product">
-        <div class="carousel">
-          <button class="carouselButton">^</button>
-          <img src="img/product_2.webp" alt="HyperX1" class="carouselImg" />
-          <img src="img/product_3.webp" alt="HyperX2" class="carouselImg" />
-          <img src="img/product_4.webp" alt="HyperX3" class="carouselImg" />
-          <img src="img/product_5.webp" alt="HyperX4" class="carouselImg" />
-          <button class="carouselButton">v</button>
-        </div>
-        <img src="img/product_1.webp" alt="HyperX" class="mainPhoto" />
-        <div class="headphoneInfo">
-          <h1>
-            Беспроводная игровая гарнитура Cloud Stinger Core с технологией DTS
-          </h1>
-          <ul>
-            <li>Беспроводное подключение 2,4 ГГц игрового класса</li>
-            <li>
-              Технология пространственного звука DTS® Headphone:X® Spatial Audio
-            </li>
-            <li>Мягкие амбушюры из ткани</li>
-            <li>Прочное стальное оголовье</li>
-          </ul>
-          <button class="whereToBuyBut">WHERE TO BUY</button>
+        <div class="product__container">
+          <div class="carousel">
+            <button class="carousel__button up">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z"
+                ></path>
+              </svg>
+            </button>
+            <ul class="carousel__images">
+              <li>
+                <img
+                  src="img/product_2.webp"
+                  alt="HyperX1"
+                  class="carousel__image active"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/product_3.webp"
+                  alt="HyperX2"
+                  class="carousel__image"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/product_4.webp"
+                  alt="HyperX3"
+                  class="carousel__image"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/product_5.webp"
+                  alt="HyperX4"
+                  class="carousel__image"
+                />
+              </li>
+            </ul>
+            <button class="carousel__button down">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <img src="img/product_1.webp" alt="HyperX" class="product__image" />
+          <div class="product__info">
+            <h1>
+              Беспроводная игровая гарнитура Cloud Stinger Core с технологией
+              DTS
+            </h1>
+            <ul class="product__description">
+              <li>Беспроводное подключение 2,4 ГГц игрового класса</li>
+              <li>
+                Технология пространственного звука DTS® Headphone:X® Spatial
+                Audio
+              </li>
+              <li>Мягкие амбушюры из ткани</li>
+              <li>Прочное стальное оголовье</li>
+            </ul>
+            <button class="order">ЗАМОВИТИ</button>
+          </div>
         </div>
       </section>
       <section class="description">
@@ -52,23 +102,20 @@
           пространственного звука <bold>DTS Headphone:X</bold>
         </h1>
         <p>
-          Наслаждайся удобством беспроводной связи и пространственным звуком
-          DTS® Headphone:X®[1] по очень выгодной цене. HyperX Cloud Stinger Core
-          — это легкая, прочная и надежная игровая гарнитура с потрясающим
-          качеством звука. Общайся с друзьями в сети и поддерживай связь без
-          помех со своей командой в игре благодаря микрофону с функцией
-          шумоподавления. Кроме того, Cloud Stinger Core имеет встроенные
-          элементы управления звуком и удобный микрофон с отключением при
-          повороте.
+          Наслаждайся удобством беспроводной связи и пространственным звуком по
+          очень выгодной цене. HyperX Cloud Stinger Core — это легкая, прочная и
+          надежная игровая гарнитура с потрясающим качеством звука. Общайся с
+          друзьями в сети и поддерживай связь без помех со своей командой в игре
+          благодаря микрофону с функцией шумоподавления. Кроме того, Cloud
+          Stinger Core имеет встроенные элементы управления звуком и удобный
+          микрофон с отключением при повороте.
         </p>
         <div class="features">
           <div class="feature">
             <p class="feature_text">Беспроводное подключение игрового класса</p>
           </div>
           <div class="feature">
-            <p class="feature_text">
-              Технология пространственного звука DTS® Headphone:X®
-            </p>
+            <p class="feature_text">Технология пространственного звука</p>
           </div>
           <div class="feature">
             <p class="feature_text">Комфортная легкость</p>
@@ -87,16 +134,35 @@
       <section class="price_and_form">
         <div class="price">Ціна: 1488 грн.</div>
         <div class="form-container">
-          <form class="form">
-            <input class="input" id="name" name="name" placeholder="Ім'я" />
-            <input class="input" id="phone" name="phone" placeholder="Номер" />
-            <button class="order" type="submit">Замовити</button>
+          <form class="form" id="form">
+            <input
+              class="form__input"
+              id="phone"
+              name="phone"
+              type="tel"
+              pattern="^[+]?[0-9]+"
+              autocomplete="tel"
+              placeholder="Номер"
+              required
+            />
+            <input
+              class="form__input"
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="given-name"
+              placeholder="Ім'я"
+            />
+            <button class="order" type="submit">ЗАМОВИТИ</button>
           </form>
         </div>
       </section>
     </main>
     <footer>
-      <p>&copy; 2023 Logo. All rights reserved. Design by Hyper Store.</p>
+      <p>Copyright &copy; 2023 HyperStore. All rights reserved.</p>
     </footer>
+    <!-- TODO: Please include axios through bundler to remove unused code -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

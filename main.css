@@ -1,15 +1,46 @@
+@font-face {
+  font-family: hyperFont;
+  src: url(./font/SB-Hyper\ X.ttf);
+}
+
 html,
 body {
   margin: 0;
   height: 100%;
+  font-family: proxima-nova, -apple-system, blinkmacsystemfont, San Francisco,
+    Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
+img {
+  mix-blend-mode: multiply;
+  -webkit-user-drag: none;
+}
+
+p,
 h1 {
   margin: 0;
 }
 
-p {
+.logo {
+  font-family: hyperFont;
+  font-size: 3rem;
+  font-weight: 420;
+  color: black;
+  user-select: none;
+  cursor: pointer;
+}
+
+.contacts {
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact {
+  color: black;
 }
 
 a:link,
@@ -20,28 +51,52 @@ a:active {
 }
 
 header {
-  height: 50px;
-  padding: 0 50px;
+  height: 70px;
+  padding: 0 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #e6ebf0;
 }
 
-.logo {
+@media (max-width: 700px) {
+  header {
+    padding: 0 20px;
+  }
+}
+
+.contact {
+  display: block;
 }
 
 .order {
   padding: 10px;
   background-color: #c8102e;
   color: #fff;
+  cursor: pointer;
 }
 
-.hero > img {
-  width: 100%;
+.order:hover {
+  background-color: #e01637;
 }
 
 .product {
+  background-color: #f5f6f7;
+  width: 100%;
   display: flex;
+  justify-content: center;
+}
+
+.product__container {
+  display: flex;
+  max-width: 1200px;
+}
+
+@media (max-width: 900px) {
+  .product__container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .carousel {
@@ -51,6 +106,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 150px;
+  gap: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -59,43 +115,50 @@ header {
   }
 }
 
-.carouselImg {
-  margin: 5px;
-  width: 140px;
-  height: 140px;
-  border: 1px solid gray;
+.carousel__images {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.carouselImg:hover {
-  border: 1px solid red;
-}
-
-.carouselButton {
-  width: 50px;
-  height: 50px;
+.carousel__image {
+  width: 100px;
+  height: 100px;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
-.mainPhoto {
-  width: 500px;
-  height: 500px;
+.carousel__image:hover {
+  border: 1px solid #e01637;
 }
 
-.headphoneInfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 1px solid blue;
-  margin: 30px;
-  width: 300px;
+.carousel__image.active {
+  border: 1px solid #e6ebf0;
 }
 
-@media (max-width: 750px) {
-  .headphoneInfo {
+.carousel__button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #e6ebf0;
+}
+
+.product__image {
+  width: calc(100vh - 70px - 6rem);
+  height: calc(100vh - 70px - 6rem);
+}
+
+.product__info > ul {
+  margin: 0.5rem 0 0.5rem 0;
+  padding-left: 1rem;
+}
+
+/* @media (max-width: 900px) {
+  .product__info {
     display: none;
   }
-}
+} */
 
 .whereToBuyBut {
   width: 200px;
@@ -104,17 +167,14 @@ header {
   background-color: red;
 }
 
-.phone {
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 section {
-  margin: 0 0 50px 0;
+  padding: 3rem 0;
+}
+
+.description {
+  max-width: 1328px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .features {
@@ -147,22 +207,23 @@ section {
 }
 
 .price {
+  border: 1px solid red;
 }
 
 .form {
+  border: 1px solid red;
 }
 
-.input {
-  display: block;
+.form__input {
   margin: 10px 0;
+  display: block;
 }
 
 footer {
   display: flex;
-  align-items: center;
-  background-color: black;
-  color: white;
+  justify-content: center;
   height: 50px;
+  font-size: 13px;
 }
 
 .burger {
