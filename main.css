@@ -24,6 +24,13 @@ h1 {
   margin: 0;
 }
 
+section {
+  padding: 3rem 0;
+  width: 100%;
+  max-width: 1328px;
+  margin: 0 auto;
+}
+
 .logo {
   font-family: hyperFont;
   font-size: 3rem;
@@ -59,12 +66,6 @@ header {
   border-bottom: 1px solid #e6ebf0;
 }
 
-@media (max-width: 700px) {
-  header {
-    padding: 0 20px;
-  }
-}
-
 .contact {
   display: block;
 }
@@ -80,26 +81,19 @@ header {
   background-color: #e01637;
 }
 
-.product {
+.product__wrapper {
   background-color: #f5f6f7;
-  width: 100%;
+}
+
+.product {
   display: flex;
-  justify-content: center;
 }
 
-.product__container {
+.product__gallery {
   display: flex;
-  max-width: 1200px;
 }
 
-@media (max-width: 900px) {
-  .product__container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.carousel {
+.gallery__carousel {
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -107,12 +101,6 @@ header {
   align-items: center;
   width: 150px;
   gap: 10px;
-}
-
-@media (max-width: 1024px) {
-  .carousel {
-    display: none;
-  }
 }
 
 .carousel__images {
@@ -128,7 +116,8 @@ header {
   border: 1px solid transparent;
 }
 
-.carousel__image:hover {
+.carousel__image:hover,
+.carousel__image.active:hover {
   border: 1px solid #e01637;
 }
 
@@ -144,31 +133,42 @@ header {
   border: 1px solid #e6ebf0;
 }
 
-.product__image {
-  width: calc(100vh - 70px - 6rem);
-  height: calc(100vh - 70px - 6rem);
+.swiper {
+  width: 750px; /* TODO: adaptive size*/
+  height: 750px; /* TODO: adaptive size*/
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+  background-color: #f5f6f7;
 }
 
-.product__info > ul {
-  margin: 0.5rem 0 0.5rem 0;
-  padding-left: 1rem;
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  box-sizing: content-box;
+  background-color: #f5f6f7;
+  transition: transform 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-/* @media (max-width: 900px) {
-  .product__info {
-    display: none;
-  }
-} */
-
-.whereToBuyBut {
-  width: 200px;
-  height: 50px;
-  border: 1px solid red;
-  background-color: red;
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  background-color: #f5f6f7;
 }
 
-section {
-  padding: 3rem 0;
+.product__aside {
+  max-width: 412px;
 }
 
 .description {
@@ -228,4 +228,16 @@ footer {
 
 .burger {
   display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+  }
+  .product {
+    flex-direction: column;
+  }
+  .gallery__carousel {
+    display: none;
+  }
 }
