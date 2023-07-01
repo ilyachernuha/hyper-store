@@ -25,9 +25,9 @@ h1 {
 }
 
 section {
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   width: 100%;
-  max-width: 1328px;
+  max-width: 1218px;
   margin: 0 auto;
 }
 
@@ -59,11 +59,16 @@ a:active {
 
 header {
   height: 70px;
-  padding: 0 100px;
+  border-bottom: 1px solid #e6ebf0;
+}
+
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e6ebf0;
+  max-width: 1328px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .contact {
@@ -93,6 +98,7 @@ header {
   display: flex;
 }
 
+/* TODO: carousel may be implemented completely with swiper.js */
 .gallery__carousel {
   margin: 10px;
   display: flex;
@@ -133,9 +139,10 @@ header {
   border: 1px solid #e6ebf0;
 }
 
+/* TODO: swiper may be implemented completely with swiper.js*/
 .swiper {
-  width: 750px; /* TODO: adaptive size*/
-  height: 750px; /* TODO: adaptive size*/
+  width: 750px; /* TODO: adaptive size, consider lazysizes.js*/
+  height: 750px; /* TODO: adaptive size, consider lazysizes.js*/
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -171,32 +178,30 @@ header {
   max-width: 412px;
 }
 
-.description {
-  max-width: 1328px;
-  width: 100%;
-  margin: 0 auto;
+.product-features {
+  display: flex;
+  gap: 3rem;
 }
 
-.features {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+.product-features__description {
+  width: 40%;
+}
+
+.product-features__features-wrapper {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-gap: 1rem;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 60%;
 }
 
 .feature {
   border: 1px solid #e6ebf0;
   display: flex;
   align-items: center;
-  padding: 10px;
-  width: 200px;
-  height: 60px;
-}
-
-.feature_text {
-  width: 100%;
-  text-align: center;
+  padding: 0.875rem;
+  max-width: 321px;
 }
 
 .price_and_form {
@@ -207,11 +212,9 @@ header {
 }
 
 .price {
-  border: 1px solid red;
 }
 
 .form {
-  border: 1px solid red;
 }
 
 .form__input {
@@ -231,13 +234,13 @@ footer {
 }
 
 @media (max-width: 768px) {
-  header {
-    padding: 0 20px;
-  }
   .product {
-    flex-direction: column;
+    display: block;
   }
   .gallery__carousel {
     display: none;
+  }
+  .product-features {
+    display: block;
   }
 }

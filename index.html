@@ -11,21 +11,23 @@
   </head>
   <body>
     <header>
-      <a href="/" class="logo">HYPER STORE</a>
-      <ul class="contacts">
-        <li>
-          <a class="contact" href="tel:+380981488228">+380981488228</a>
-        </li>
-        <li>
-          <a class="contact" href="tel:+380981488228">+380981488322</a>
-        </li>
-      </ul>
-      <div class="burger">
-        <ul>
-          <li>First</li>
-          <li>Second</li>
-          <li>Third</li>
+      <div class="header__container">
+        <a href="/" class="logo">HYPER STORE</a>
+        <ul class="contacts">
+          <li>
+            <a class="contact" href="tel:+380981488228">+380981488228</a>
+          </li>
+          <li>
+            <a class="contact" href="tel:+380981488322">+380981488322</a>
+          </li>
         </ul>
+        <div class="burger">
+          <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -211,21 +213,23 @@
           </div>
         </section>
       </div>
-      <section class="description">
-        <h1>
-          Идеальное решение для игр: свобода от проводов и технология
-          пространственного звука <bold>DTS Headphone:X</bold>
-        </h1>
-        <p>
-          Наслаждайся удобством беспроводной связи и пространственным звуком по
-          очень выгодной цене. HyperX Cloud Stinger Core — это легкая, прочная и
-          надежная игровая гарнитура с потрясающим качеством звука. Общайся с
-          друзьями в сети и поддерживай связь без помех со своей командой в игре
-          благодаря микрофону с функцией шумоподавления. Кроме того, Cloud
-          Stinger Core имеет встроенные элементы управления звуком и удобный
-          микрофон с отключением при повороте.
-        </p>
-        <div class="features">
+      <section class="product-features">
+        <div class="product-features__description">
+          <h1>
+            Идеальное решение для игр: свобода от проводов и технология
+            пространственного звука <bold>DTS Headphone:X</bold>
+          </h1>
+          <p>
+            Наслаждайся удобством беспроводной связи и пространственным звуком
+            по очень выгодной цене. HyperX Cloud Stinger Core — это легкая,
+            прочная и надежная игровая гарнитура с потрясающим качеством звука.
+            Общайся с друзьями в сети и поддерживай связь без помех со своей
+            командой в игре благодаря микрофону с функцией шумоподавления. Кроме
+            того, Cloud Stinger Core имеет встроенные элементы управления звуком
+            и удобный микрофон с отключением при повороте.
+          </p>
+        </div>
+        <div class="product-features__features-wrapper">
           <div class="feature">
             <p class="feature_text">Беспроводное подключение игрового класса</p>
           </div>
@@ -257,7 +261,7 @@
               type="tel"
               pattern="^[+]?[0-9]+"
               autocomplete="tel"
-              placeholder="Номер"
+              placeholder="Номер телефону"
               required
             />
             <input
@@ -266,7 +270,7 @@
               name="name"
               type="text"
               autocomplete="given-name"
-              placeholder="Ім'я"
+              placeholder="Ваше ім'я"
             />
             <button class="order" type="submit">ЗАМОВИТИ</button>
           </form>
