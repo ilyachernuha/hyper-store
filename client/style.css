@@ -109,7 +109,7 @@ header {
 
 #thumb {
   width: 100px;
-  height: 60%;
+  height: 50%;
   margin: 3rem 0;
 }
 
@@ -220,6 +220,12 @@ footer {
 
 .burger {
   display: none;
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
