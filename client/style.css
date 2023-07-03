@@ -1,6 +1,6 @@
 @font-face {
   font-family: hyperFont;
-  src: url(./font/SB-Hyper\ X.ttf);
+  src: url(./fonts/SB-Hyper\ X.ttf);
 }
 
 html,
@@ -44,6 +44,10 @@ section {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.knockout-image {
+  mix-blend-mode: multiply;
 }
 
 .contact {
@@ -94,84 +98,75 @@ header {
   display: flex;
 }
 
-.product__gallery {
+.product-gallery {
   display: flex;
+  user-select: none;
 }
 
-/* TODO: carousel may be implemented completely with swiper.js */
-.gallery__carousel {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  gap: 10px;
+#swiper {
+  width: 750px;
 }
 
-.carousel__images {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.carousel__image {
+#thumb {
   width: 100px;
-  height: 100px;
-  cursor: pointer;
-  border: 1px solid transparent;
+  height: 60%;
+  margin: 3rem 0;
 }
 
-.carousel__image:hover,
-.carousel__image.active:hover {
+.thumbnail-container {
+  position: relative;
+  user-select: none;
+}
+
+.product-gallery__thumbnail-carousel {
+}
+
+.product-gallery__thumbnail {
+  display: block;
+  width: 100%;
+  border: 1px solid transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.product-gallery__thumbnail:hover {
   border: 1px solid #e01637;
 }
 
-.carousel__image.active {
+.product-gallery__thumbnail.swiper-slide-thumb-active {
   border: 1px solid #e6ebf0;
 }
 
-.carousel__button {
-  width: 40px;
+.product-gallery__thumbnail-image {
+  display: block;
+  width: 100%;
+}
+
+.swiper-button {
+  position: absolute;
   height: 40px;
-  cursor: pointer;
-  background: transparent;
+  width: 40px;
+  background-color: transparent;
   border: 1px solid #e6ebf0;
+  transform: translate(-50%);
+  left: 50%;
+  cursor: pointer;
 }
 
-/* TODO: swiper may be implemented completely with swiper.js*/
-.swiper {
-  width: 750px; /* TODO: adaptive size, consider lazysizes.js*/
-  height: 750px; /* TODO: adaptive size, consider lazysizes.js*/
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  z-index: 1;
-  display: block;
-  background-color: #f5f6f7;
+.swiper-button-prev {
 }
 
-.swiper-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  box-sizing: content-box;
-  background-color: #f5f6f7;
-  transition: transform 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+.swiper-button-next {
 }
 
-.swiper-slide {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: block;
-  background-color: #f5f6f7;
+.swiper-button-disabled {
+  display: none;
+}
+
+.swiper-button__icon {
+  height: 28px;
+  margin: 0.375rem;
+  width: 28px;
 }
 
 .product__aside {
@@ -211,12 +206,6 @@ header {
   align-items: center;
 }
 
-.price {
-}
-
-.form {
-}
-
 .form__input {
   margin: 10px 0;
   display: block;
@@ -237,7 +226,7 @@ footer {
   .product {
     display: block;
   }
-  .gallery__carousel {
+  .thumbnail-container {
     display: none;
   }
   .product-features {
