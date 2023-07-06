@@ -3,7 +3,7 @@ import "./style.css";
 import Swiper from "swiper";
 import { Navigation, Thumbs, Pagination, Zoom } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
+// import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/thumbs";
 import "swiper/css/zoom";
