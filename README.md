@@ -1,6 +1,6 @@
 # Website Prod Demo
 
-https://ilyachernuha.github.io/hyper-store/
+http://2705218.fr504615.web.hosting-test.net/
 
 # Website Dev Preview
 
