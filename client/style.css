@@ -292,6 +292,7 @@ a:active {
   height: 300px;
   width: 300px;
   --swiper-pagination-color: var(--color-background-dark);
+  --swiper-pagination-bottom: -6px;
 }
 
 .product__image {
