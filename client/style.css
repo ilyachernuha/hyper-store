@@ -296,8 +296,15 @@ a:active {
   height: 300px;
 }
 
-/* .product__aside {
-} */
+.product__aside {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .product__aside {
+    display: block;
+  }
+}
 
 /* .product__features {
 } */
