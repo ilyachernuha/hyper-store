@@ -385,11 +385,11 @@ a:active {
   padding-top: 3rem;
   display: grid;
   gap: 1rem;
-  max-width: 300px;
 }
 
-/* .form__input {
-} */
+.order__form-input {
+  border: 1px solid var(--color-border-light);
+}
 
 /* FOOTER SECTION */
 
