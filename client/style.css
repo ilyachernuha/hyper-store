@@ -166,7 +166,7 @@ a:active {
 
 .header__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   max-width: 1328px;
   margin: 0 auto;
@@ -174,8 +174,22 @@ a:active {
   padding: 0 1rem;
 }
 
+@media (min-width: 750px) {
+  .header__contacts {
+    justify-content: space-between;
+  }
+}
+
 .header__contacts {
+  display: none;
   list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 750px) {
+  .header__contacts {
+    display: block;
+  }
 }
 
 .header__contact {
@@ -185,8 +199,8 @@ a:active {
 
 /* PRODUCT STYLES */
 
-.product {
-}
+/* .product {
+} */
 
 @media (min-width: 750px) {
   .product {
@@ -195,17 +209,28 @@ a:active {
   }
 }
 
-.product__gallery {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  user-select: none;
+/* .product__gallery {
+} */
+
+@media (min-width: 750px) {
+  .product__gallery {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    user-select: none;
+  }
 }
 
 .product__carousel {
-  display: grid;
-  place-content: center;
-  place-items: center;
-  gap: 1rem;
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .product__carousel {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 1rem;
+  }
 }
 
 #carousel {
@@ -241,29 +266,29 @@ a:active {
 }
 
 #swiper {
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
   --swiper-pagination-color: var(--color-background-dark);
 }
 
 .product__image {
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
 }
 
-.product__aside {
-}
+/* .product__aside {
+} */
 
-.product__features {
-}
+/* .product__features {
+} */
 
 /* DESCRIPTION STYLES */
 
-.description {
-}
+/* .description {
+} */
 
-.description__main {
-}
+/* .description__main {
+} */
 
 .description__features {
   display: grid;
@@ -287,8 +312,8 @@ a:active {
   place-items: center;
 }
 
-.order__price {
-}
+/* .order__price {
+} */
 
 .form {
   display: grid;
@@ -296,8 +321,8 @@ a:active {
   max-width: 300px;
 }
 
-.form__input {
-}
+/* .form__input {
+} */
 
 /* FOOTER SECTION */
 
