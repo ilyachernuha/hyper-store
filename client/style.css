@@ -308,6 +308,9 @@ a:active {
     width: 500px;
     height: 500px;
   }
+  .swiper-pagination {
+    display: none;
+  }
 }
 
 .product__aside {
