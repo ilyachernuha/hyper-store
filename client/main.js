@@ -39,9 +39,10 @@ const form = document.getElementById("form");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const { data } = await axios.post("http://127.0.0.1:3000", form, {
+  const { data } = await axios.post("/api.php", form, {
     headers: {
       "Content-Type": "application/json",
     },
   });
+  console.log(data);
 });
