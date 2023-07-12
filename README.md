@@ -1,6 +1,6 @@
 # Website Prod Demo
 
-http://2705218.fr504615.web.hosting-test.net/
+https://www.happytown.store/
 
 # Website Dev Preview
 
