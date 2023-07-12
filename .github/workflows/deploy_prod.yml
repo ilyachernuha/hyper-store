@@ -12,20 +12,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install PHP dependencies
+        uses: php-actions/composer@v6
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "npm"
-          cache-dependency-path: ./client/package-lock.json
-      - name: Install dependencies
-        run: npm install --prefix client
+          cache-dependency-path: ./package-lock.json
+      - name: Install Node dependencies
+        run: npm install
       - name: Build
-        run: npm run --prefix client build
+        run: npm run build
       - name: Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          local-dir: ./client/dist/
+          local-dir: ./build/
           server: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}

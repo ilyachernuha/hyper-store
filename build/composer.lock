@@ -395,7 +395,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v10.14.1",
+            "version": "v10.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -1075,16 +1075,16 @@
         },
         {
             "name": "sergix44/container",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SergiX44/container.git",
-                "reference": "9925428b57c9e02027ae753213ce5ea15821ea00"
+                "reference": "54513797b8dba8d9b5d4db62b9d3c862d56f696c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SergiX44/container/zipball/9925428b57c9e02027ae753213ce5ea15821ea00",
-                "reference": "9925428b57c9e02027ae753213ce5ea15821ea00",
+                "url": "https://api.github.com/repos/SergiX44/container/zipball/54513797b8dba8d9b5d4db62b9d3c862d56f696c",
+                "reference": "54513797b8dba8d9b5d4db62b9d3c862d56f696c",
                 "shasum": ""
             },
             "require": {
@@ -1119,7 +1119,7 @@
             "description": "A simple and fast service container",
             "support": {
                 "issues": "https://github.com/SergiX44/container/issues",
-                "source": "https://github.com/SergiX44/container/tree/2.0.0"
+                "source": "https://github.com/SergiX44/container/tree/2.1.0"
             },
             "funding": [
                 {
@@ -1127,7 +1127,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-02T22:16:59+00:00"
+            "time": "2023-07-04T16:59:59+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
