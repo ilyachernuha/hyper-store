@@ -62,7 +62,7 @@ const form = document.getElementById("form");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const { data } = await axios.post("/api", form, {
+  const { data } = await axios.post("/api/", form, {
     headers: {
       "Content-Type": "application/json",
     },

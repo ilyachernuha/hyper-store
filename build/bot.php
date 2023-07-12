@@ -11,6 +11,10 @@ use SergiX44\Nutgram\Telegram\Types\Message\Message;
 
 $bot = new Nutgram($_ENV["TOKEN"]);
 
+$bot->onMessage(function (Nutgram $bot) {
+    $bot->sendMessage('You sent a message!');
+});
+
 $bot->setRunningMode(Webhook::class);
 
 ?>
