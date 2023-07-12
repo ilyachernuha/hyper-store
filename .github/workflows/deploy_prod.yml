@@ -15,7 +15,7 @@ jobs:
       - name: Install PHP dependencies
         uses: php-actions/composer@v6
         with:
-          command: composer install -d ./build/
+          command: php composer install -d ./build/
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
