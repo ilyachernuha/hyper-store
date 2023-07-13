@@ -14,8 +14,15 @@ import {
 import "swiper/css";
 import "swiper/css/pagination";
 
+import "./styles/reset.css";
+import "./styles/root.css";
 import "./styles/fonts.css";
-import "./styles/style.css";
+import "./styles/common.css";
+import "./styles/header.css";
+import "./styles/product.css";
+import "./styles/description.css";
+import "./styles/order.css";
+import "./styles/footer.css";
 
 const thumb = new Swiper("#thumb", {
   direction: "vertical",

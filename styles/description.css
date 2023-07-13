@@ -1,0 +1,36 @@
+/* DESCRIPTION STYLES */
+
+.description__title {
+  margin-bottom: 1rem;
+}
+
+.description__text {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 750px) {
+  .description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.description__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.description__feature {
+  border: 1px solid #e6ebf0;
+  display: flex;
+  align-items: center;
+  padding: 0.875rem;
+  max-width: 321px;
+}
+
+.description__feature-text {
+  font-size: 13.33333px;
+  font-weight: 600;
+}

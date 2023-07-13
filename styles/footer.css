@@ -1,0 +1,9 @@
+/* FOOTER SECTION */
+
+.footer {
+  display: grid;
+  place-content: center;
+  height: 50px;
+  font-size: 0.8rem;
+  font-weight: 400;
+}

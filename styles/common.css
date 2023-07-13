@@ -1,0 +1,59 @@
+/* COMMON STYLES */
+
+body {
+  background-color: var(--color-background-white);
+
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  padding: 0.75em 1.5em;
+  background-color: var(--color-button);
+  color: var(--color-text-inverse);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+}
+
+/* TODO: add button icon */
+/* .button[data-icon="shopping-cart"]::after {
+  content: "";
+  background-image: url("images/icon-cart.svg");
+  width: 15px;
+  height: 16px;
+} */
+
+.button:is(:hover, :focus) {
+  background-color: var(--color-button-hover);
+}
+
+/* UTILITY STYLES */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 3rem 1rem;
+}
+
+.knockout-image {
+  mix-blend-mode: multiply;
+}
+
+@media (min-width: 765px) {
+  .mobile-only {
+    display: none;
+  }
+}

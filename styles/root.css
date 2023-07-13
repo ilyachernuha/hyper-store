@@ -1,0 +1,25 @@
+:root {
+  --color-primary: rgb(219, 38, 39);
+  --color-secondary: rgb(0, 0, 0);
+
+  --color-text-primary: rgb(0, 0, 0);
+  --color-text-secondary: rgb(62, 64, 67);
+  --color-text-light: rgb(153, 153, 153);
+  --color-text-inverse: rgb(255, 255, 255);
+
+  --color-background-dark: rgb(0, 0, 0);
+  --color-background-light: rgb(245, 246, 247);
+  --color-background-white: rgb(255, 255, 255);
+
+  --color-border-dark: rgb(189, 196, 208);
+  --color-border-light: rgb(230, 235, 240);
+
+  --color-button: rgb(200, 16, 46);
+  --color-button-hover: rgb(224, 22, 55);
+
+  /* TODO: fix fonts */
+  --font: "RBNo3.1", -apple-system, blinkmacsystemfont, "San Francisco",
+    "Helvetica", sans-serif;
+
+  --font-logo: hyperfont;
+}
