@@ -17,9 +17,8 @@
   --color-button: rgb(200, 16, 46);
   --color-button-hover: rgb(224, 22, 55);
 
-  /* TODO: fix fonts */
-  --font: "RBNo3.1", -apple-system, blinkmacsystemfont, "San Francisco",
-    "Helvetica", sans-serif;
+  --font: -apple-system, blinkmacsystemfont, "San Francisco", "Helvetica",
+    sans-serif;
 
   --font-logo: hyperfont;
 }
