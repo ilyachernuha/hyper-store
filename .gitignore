@@ -25,6 +25,4 @@ dist-ssr
 
 .env
 
-build/www/assets
-build/vendor
-build/www/index.html
+build/www
