@@ -25,4 +25,4 @@ dist-ssr
 
 .env
 
-build/www
+build/www/
