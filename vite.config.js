@@ -14,12 +14,23 @@ export default defineConfig({
           .find((arg) => arg.startsWith("--base="))
           ?.split("=")[1];
         if (!base) {
-          return;
+          return html;
         }
-        return html.replace(
+        let newHtml = html.replace(
           new RegExp(/(data-src=)['"](.*)['"]/, "g"),
           `$1"${base}$2"`
         );
+        newHtml = newHtml.replace(
+          new RegExp(/(data-srcset=)['"](.*)['"]/, "g"),
+          (match, p1, p2) => {
+            p2 = p2
+              .split(", ")
+              .map((src) => base + src)
+              .join(", ");
+            return `${p1}"${p2}"`;
+          }
+        );
+        return newHtml;
       },
     },
   ],
