@@ -10,6 +10,9 @@
 }
 
 @media (min-width: 765px) {
+  .product {
+    padding: 0 1rem;
+  }
   .product::after {
     content: "";
     display: block;
@@ -154,8 +157,6 @@
 /* TODO: refactor aside fonts */
 
 .product__title {
-  font-family: "RBNo3.1", -apple-system, blinkmacsystemfont, San Francisco,
-    Helvetica, sans-serif;
   font-size: 19.2px;
   font-weight: 700;
   line-height: 1.4;
@@ -172,8 +173,6 @@
 
 .product__features {
   padding-left: 1rem;
-  font-family: "proxima-nova", -apple-system, blinkmacsystemfont, San Francisco,
-    Helvetica, sans-serif;
   line-height: 1.5;
   color: #000;
   font-size: 13.33333px;
@@ -192,8 +191,6 @@
 }
 
 .product__color {
-  font-family: proxima-nova, -apple-system, blinkmacsystemfont, San Francisco,
-    Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
