@@ -9,11 +9,9 @@ use SergiX44\Nutgram\Nutgram;
 use SergiX44\Nutgram\RunningMode\Webhook;
 use SergiX44\Nutgram\Telegram\Types\Message\Message;
 
-$bot = new Nutgram($_ENV["TOKEN"]);
+$bot = new Nutgram($_ENV["TELEGRAM_BOT_TOKEN"]);
 
-$bot->onMessage(function (Nutgram $bot) {
-    $bot->sendMessage('You sent a message!');
-});
+$chat_id = $_ENV["TELEGRAM_CHAT_ID"];
 
 $bot->setRunningMode(Webhook::class);
 
